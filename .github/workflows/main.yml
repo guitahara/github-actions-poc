@@ -22,4 +22,3 @@ jobs:
     - run: npm install
     - name: Iniciando Teste
     - run: npm test
-    - name: FIM
