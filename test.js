@@ -9,6 +9,6 @@ describe('Testes', function() {
 
     it('Sucesso: subtração de números', () => {
         const result = subtract(1,1)
-        expect(result).to.be.eql(0)
+        expect(result).to.be.eql(1)
     }) 
 })
