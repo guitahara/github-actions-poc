@@ -14,9 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Instalando Nodejs versão ${{ matrix.node-version }}
+    - name: Usando Nodejs versão ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
+        node-version: ${{ matrix.node-version }}  
+    - name: npm install e test
+      run: |
+        npm ci
+        npm test
+      env: 
+        AWS_ACCESS_KEY_ID: ${{ secrets.accessKeyId }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.secretAccessKey }}
