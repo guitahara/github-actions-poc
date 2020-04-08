@@ -4,7 +4,7 @@ const {add, subtract} = require('./index')
 describe('Testes', function() {
     it('Sucesso: adição de números', () => {
         const result = add(1,1)
-        expect(result).to.be.eql(2)
+        expect(result).to.be.eql(1)
     }) 
 
     it('Sucesso: subtração de números', () => {
